@@ -9,6 +9,7 @@ import savingThrows from './savingThrowReducer';
 import attackBonuses from './attackBonusesReducer';
 import weapons from './weaponsReducer';
 import abilities from './abilitiesReducer';
+import spells from './spellsReducer';
 
 const rootReducer = combineReducers({
     character,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
     savingThrows,
     attackBonuses,
     weapons,
-    abilities
+    abilities,
+    spells
 });
 
 export default rootReducer;

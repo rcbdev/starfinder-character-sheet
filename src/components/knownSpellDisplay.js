@@ -20,11 +20,15 @@ export default class KnownSpellDisplay extends Component {
     this.setState(() => {return {dialogShown: false}});
   }
 
+  removeSpell = () => {
+    this.props.removeSpell();
+  }
+
   render() {
     return (
-      <div>
+      <div style={{cursor: 'pointer'}}>
         <Typography type="subheading" onClick={this.showDialog} style={{display: 'inline-block', marginRight: 5}}>{this.props.spell.name}</Typography>
-        <IconButton color="accent" dense={true} style={{display: 'inline-block'}}><Icon style={{fontSize: 12}}>clear</Icon></IconButton>
+        <IconButton color="accent" style={{display: 'inline-block'}} onClick={this.removeSpell}><Icon style={{fontSize: 12}}>clear</Icon></IconButton>
         <Dialog open={this.state.dialogShown} onRequestClose={this.hideDialog}>
           <DialogTitle>{this.props.spell.name}</DialogTitle>
           <DialogContent>

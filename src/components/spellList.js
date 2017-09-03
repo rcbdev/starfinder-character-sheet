@@ -7,12 +7,11 @@ export default class SpellList extends Component {
   render() {
     const levels = [...Array(7).keys()];
     const content = [];
-    for (let level in levels) {
-      const knownSpells = [];
-      if(level === 1) {
-        knownSpells.push(spells[0]);
-      }
-      content.push(<SpellLevel key={level} level={level} knownSpells={knownSpells}/>);
+    for (let levelIndex in levels) {
+      const level = levels[levelIndex];
+      const knownSpells = this.props.knownSpells.filter(s => s.level === level);
+      const spellsAtLevel = spells.filter(s => s.level === level);
+      content.push(<SpellLevel key={level} level={level} knownSpells={knownSpells} spellsAtLevel={spellsAtLevel} removeSpell={this.props.removeSpell} addSpell={this.props.addSpell}/>);
     }
 
     return (

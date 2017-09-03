@@ -13,7 +13,7 @@ import AttackBonusContainer from './containers/attackBonusContainer';
 import SaveContainer from './containers/saveContainer';
 import WeaponsContainer from './containers/weaponsContainer';
 import AbilitiesContainer from './containers/abilitiesContainer';
-import SpellList from './components/spellList';
+import SpellsContainer from './containers/spellsContainer';
 
 class App extends Component {
   render() {
@@ -57,7 +57,7 @@ class App extends Component {
               <WeaponsContainer />
             </div>
             <div style={{margin: '20px'}}>
-              <SpellList />
+              <SpellsContainer />
             </div>
           </Grid>
         </Grid>

@@ -70,5 +70,6 @@ export default {
         [AttackBonuses.THROWN]: { misc: 0 }
     },
     weapons: [],
-    abilities: ''
+    abilities: '',
+    spells: []
 }
